@@ -1,6 +1,8 @@
 <?php
 
-namespace Custom\ModuloBasico\Controller\Index;
+
+namespace Marcgento\ModuloBasico\Controller\Index;
+
 
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -19,7 +21,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
     /**
      * Index action
-     * 
+     *
      * @return $this
      */
     public function execute()
