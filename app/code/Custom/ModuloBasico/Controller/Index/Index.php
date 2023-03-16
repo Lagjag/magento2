@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Marcgento\ModuloBasico\Controller\Index;
+namespace Custom\ModuloBasico\Controller\Index;
 
 
 class Index extends \Magento\Framework\App\Action\Action
