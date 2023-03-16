@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Marcgento\ModuloBasico\Block;
+namespace Custom\ModuloBasico\Block;
 
 use Magento\Framework\View\Element\Template;
 
-class Marcgento extends Template
+class Custom extends Template
 {
     public function __cosntruct(
         \Magento\Framework\View\Element\Template\Context $context,
