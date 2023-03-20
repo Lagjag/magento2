@@ -1,6 +1,6 @@
 <?php
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Custom_ModuloBasico',
+    'Marcgento_ModuloBasico',
     __DIR__
 );
