@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Custom\ModuloBasico\Controller\Adminhtml\Index;
+namespace Marcgento\ModuloBasico\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -26,6 +26,6 @@ class Index extends \Magento\Backend\App\Action
 
     public function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Custom_ModuloBasico::index');
+        return $this->_authorization->isAllowed('Marcgento_ModuloBasico::index');
     }
 }
