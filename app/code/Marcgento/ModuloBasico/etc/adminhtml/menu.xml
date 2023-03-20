@@ -7,7 +7,7 @@
             module="Marcgento_ModuloBasico"
             sortOrder="50"
             parent="Magento_Backend::marketing"
-            resource="Magento_Backend::content"
+            resource="Marcgento_ModuloBasico::marcgentobackend"
         />
         <add
             id="Marcgento_ModuloBasico::index"
