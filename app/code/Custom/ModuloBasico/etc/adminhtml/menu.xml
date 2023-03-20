@@ -16,7 +16,7 @@
             sortOrder="51"
             parent="Custom_ModuloBasico::custombackend"
             action="customadmin/index/"
-            resource="custom_ModuloBasico::index"
+            resource="Custom_ModuloBasico::index"
         />
     </menu>
 </config>
