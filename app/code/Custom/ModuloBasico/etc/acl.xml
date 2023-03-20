@@ -5,9 +5,9 @@
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Backend::marketing">
                     <resource
-                        id="Marcgento_ModuloBasico::marcgentobackend"
-                        title="MarcgentoBackend" sortOrder="60">
-                        <resource id="Marcgento_ModuloBasico::index" title="MarcgentoBackend index" />                        
+                        id="Custom_ModuloBasico::custombackend"
+                        title="CustomBackend" sortOrder="60">
+                        <resource id="Custom_ModuloBasico::index" title="CustomBackend index" />                        
                     </resource>
                 </resource>
             </resource>
