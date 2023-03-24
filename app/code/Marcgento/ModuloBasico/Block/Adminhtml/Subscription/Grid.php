@@ -3,12 +3,12 @@
 
 namespace Marcgento\ModuloBasico\Block\Adminhtml\Subscription;
 
-use Magento\Backend\Block\Widget\Grid\Extended as Extended;
+use Magento\Backend\Block\Widget\Grid as WidgetGrid;
 
-class Grid extends Extended
+class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
     /**
-     * @var \Marcgento\ModuloBasico\Block\Adminhtml\Subscription\Collection
+     * @var \Marcgento\ModuloBasico\Model\Resource\Subscription\Collection
      */
     protected $_subscriptionCollection;
 
@@ -23,8 +23,8 @@ class Grid extends Extended
         \Magento\Backend\Helper\Data $backendHelper,
         \Marcgento\ModuloBasico\Model\ResourceModel\Subscription\Collection $subscriptionCollection,
         array $data = []
-    )
-    {
+    ){
+        echo "oso";exit;
         $this->_subscriptionCollection = $subscriptionCollection;
         parent::__construct($context, $backendHelper, $data);
         $this->setEmptyText(__('No Subscription Found'));
@@ -32,7 +32,7 @@ class Grid extends Extended
 
     /**
      * Initialize the subscription collection
-     * 
+     *
      * @return WidgetGrid
      */
     protected function _prepareCollection()

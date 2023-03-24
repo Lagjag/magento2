@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Marcgento\ModuloBasico\Controller\Adminhtml\Index;
+namespace Marcgento\ModuloBasico\Controller\Adminhtml\Subscription;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
@@ -21,11 +21,15 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
+        $resultPage->setActiveMenu('Marcgento_ModuloBasico::subscription');
+        $resultPage->addBreadcrumb(__('Grid Subscription'), __('Grid Subscription'));
+        $resultPage->addBreadcrumb(__('Manage Subscription'), __('Manage Subscription'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Subscriptions'));
         return $resultPage;
     }
 
-    public function _isAllowed()
+    protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Marcgento_ModuloBasico::index');
+        return $this->_authorization->isAllowed('Marcgento_ModuloBasico::subscription');
     }
 }
