@@ -3,14 +3,15 @@
 
 namespace Marcgento\ModuloBasico\Block\Adminhtml;
 
-use Magento\Backend\Block\Widget\Grid\Container as Container;
 
-class Subscription extends Container
+class Subscription extends \Magento\Backend\Block\Widget\Grid\Container
 {
-    protected function __construct()
+    protected function _construct()
     {
-        $this->_blockGroup = 'Marcgento_ModuloBasico';
         $this->_controller = 'adminhtml_subscription';
-        parent::__construct();
+        $this->_blockGroup = 'Marcgento_ModuloBasico';
+        $this->_headerText = __('Elemnto Marco');
+        $this->_addButtonLabel = __('Add News');
+        parent::_construct();
     }
 }
