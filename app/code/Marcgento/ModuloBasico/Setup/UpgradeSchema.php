@@ -11,16 +11,16 @@ class UpgradeSchema implements UpgradeSchemaInterface
 {
     public function upgrade(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
-        if(version_compare($context->getVersion(), '2.0.2') < 0)
+        if(version_compare($context->getVersion(), '2.0.3') < 0)
         {
             $installer = $setup;
 
             $installer->startSetup();
             $connection = $installer->getConnection();
 
-            //Install new table
+            // Install new table
             $table = $installer->getConnection()->newTable(
-                $installer->getTable('marcgento_subscription')
+              $installer->getTable('marcgento_subscription')
             )->addColumn(
                 'subscription_id',
                 \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
@@ -42,7 +42,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 ],
                 'Created at'
             )->addColumn(
-                'updated_at',
+                'update_at',
                 \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
                 null,
                 [],
@@ -51,19 +51,19 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 'firstname',
                 \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                 64,
-                ['nullable' => false],
+                ['nullable'=>false],
                 'First name'
             )->addColumn(
                 'lastname',
                 \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                 64,
-                ['nullable' => false],
+                ['nullable'=>false],
                 'Last name'
             )->addColumn(
                 'email',
                 \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                 255,
-                ['nullable' => false],
+                ['nullable'=>false],
                 'Email address'
             )->addColumn(
                 'status',
@@ -71,7 +71,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 255,
                 [
                     'nullable' => false,
-                    'default' => 'pending'
+                    'default' => 'pending',
                 ],
                 'Status'
             )->addColumn(
