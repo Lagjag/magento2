@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="marcgento_subscription" resource="default" engine="innodb" comment="Table Subscription">
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="timestamp" comment="Created at"/>
+        <column xsi:type="timestamp" name="updated_at" comment="Updated at"/>
+        <column xsi:type="text" name="firstname" nullable="false" length="64" comment="First name"/>
+        <column xsi:type="text" name="lastname" nullable="false" length="64" comment="Last name"/>
+        <column xsi:type="text" name="email" nullable="false" length="255" comment="Email address"/>
+        <column xsi:type="text" name="status" nullable="false" default="pending" length="255" comment="Status"/>
+        <column xsi:type="text" name="message" unsigned="true" nullable="false" length="64000" comment="Subscription Notes"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="subscription_id" identity="true" unsigned="true" nullable="false" comment="Subscription Id"/>
+        </constraint>
+    </table>
+</schema>
