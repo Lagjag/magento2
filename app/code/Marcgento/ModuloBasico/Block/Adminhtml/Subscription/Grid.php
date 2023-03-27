@@ -24,7 +24,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         \Marcgento\ModuloBasico\Model\ResourceModel\Subscription\Collection $subscriptionCollection,
         array $data = []
     ){
-        echo "oso";exit;
         $this->_subscriptionCollection = $subscriptionCollection;
         parent::__construct($context, $backendHelper, $data);
         $this->setEmptyText(__('No Subscription Found'));
