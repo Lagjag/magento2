@@ -3,10 +3,8 @@
     <update handle="styles" />
     <body>
         <referenceContainer name="content">
-            <!-- <block class="Magento\Backend\Block\Template" template="Marcgento_ModuloBasico::l.phtml"/> -->
-            <!-- <block class="Marcgento\ModuloBasico\Block\Adminhtml\Subscription" name="adminhtml.block.marcgentobackend.subscription.container"> -->
-                <block class="Marcgento\ModuloBasico\Block\Adminhtml\Subscription" name="adminhtml.block.marcgentobackend.subscription.grid" />
-            <!-- </block> -->
+            <!--<block class="Marcgento\ModuloBasico\Block\Adminhtml\Subscription" name="adminhtml.block.marcgentobackend.subscription.grid" />-->
+            <uiComponent name="marcgento_modulobasico_subscription_listing" />
         </referenceContainer>
     </body>
 </page>
