@@ -44,7 +44,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
     public function insertarRegistro()
     {
-        $tablaCustomModel = $this->tablaCustomFactory->create();
+        $tablaCustomModel = $this->_objectManager->create('Marcgento\ModuloSchema\Model\TablaCustom');
         $tablaCustomModel->setNombre('TercerNombre');
         $tablaCustomModel->setFechaRegistro(date("Y-m-d H:s:i"));
         $tablaCustomModel->setEstatus(1);
@@ -55,7 +55,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
     public function deleteRegistro($id)
     {
-        $tablaCustom = $this->tablaCustomFactory->create();
+        $tablaCustom = $this->_objectManager->create('Marcgento\ModuloSchema\Model\TablaCustom');
         $tablaCustom->load($id);
         $tablaCustom->delete();
         $this->getResponse()->setBody("El registro se ha eliminado");
@@ -63,7 +63,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
     public function updateRegistro($id)
     {
-        $tablaCustom = $this->tablaCustomFactory->create();
+        $tablaCustom = $this->_objectManager->create('Marcgento\ModuloSchema\Model\TablaCustom');
         $tablaCustom->load($id);
         $tablaCustom->setData('nombre', 'ActualizandoNombre');
         $tablaCustom->save();
