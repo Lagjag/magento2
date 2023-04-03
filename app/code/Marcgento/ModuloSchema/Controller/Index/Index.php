@@ -36,7 +36,7 @@ class Index extends \Magento\Framework\App\Action\Action
         $data = $this->dataCollection();
         foreach($data as $_item){
             echo "<pre>";
-            var_dump($_item->getData());
+            echo $_item->getData();
             echo "</pre>";
         }
         return $resultPage;
