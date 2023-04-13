@@ -21,8 +21,8 @@ class UpgradeData implements UpgradeDataInterface
     }
 
     public function upgrade(
-        ModuloDataSetupInterface $setup,
-        ModuloContextInterface $context
+        ModuleDataSetupInterface $setup,
+        ModuleContextInterface $context
     ){
         $setup->startSetup();
         /* Departamento Sales */
