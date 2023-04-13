@@ -1,6 +1,4 @@
-
 <?php
-
 
 namespace Marcgento\ModuloSchema\Model\ResourceModel\TablaCustom;
 
