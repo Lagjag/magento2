@@ -12,7 +12,7 @@ class InstallData implements InstallDataInterface
     private $empleadoSetupFactory;
 
     public function __construct(
-        Marcgento\ModuloEav\Setup\EmpleadoSetupFactory $empleadoSetupFactory
+        Marcgento\ModuloEav\Setup\EmpleadosSetupFactory $empleadoSetupFactory
     ){
         $this->empleadoSetupFactory = $empleadoSetupFactory;
     }
