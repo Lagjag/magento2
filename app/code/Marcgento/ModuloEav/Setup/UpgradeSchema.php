@@ -14,7 +14,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
         $setup->startSetup();
         /* Entity Empleados */
         $empleadosEntity = \Marcgento\ModuloEav\Model\Empleados::ENTITY.'_entity';
-        $departamentoTable = 'marcgento_departamento'
+        $departamentoTable = 'marcgento_departamento';
         
         $setup->getConnection()
             ->addForeignKey(
