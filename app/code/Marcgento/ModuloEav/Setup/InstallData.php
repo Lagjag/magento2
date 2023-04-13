@@ -6,13 +6,14 @@ namespace Marcgento\ModuloEav\Setup;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
+use Marcgento\ModuloEav\Setup\EmpleadoSetupFactory;
 
 class InstallData implements InstallDataInterface
 {
     private $empleadoSetupFactory;
 
     public function __construct(
-        Marcgento\ModuloEav\Setup\EmpleadoSetupFactory $empleadoSetupFactory
+        EmpleadoSetupFactory $empleadoSetupFactory
     ){
         $this->empleadoSetupFactory = $empleadoSetupFactory;
     }
