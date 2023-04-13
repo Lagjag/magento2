@@ -9,12 +9,12 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 
 class InstallData implements InstallDataInterface
 {
-    private $empleadoSetup;
+    private $empleadoSetupFactory;
 
     public function __construct(
-        Marcgento\ModuloEav\Setup\EmpleadoSetup $empleadoSetup
+        Marcgento\ModuloEav\Setup\EmpleadoSetupFactory $empleadoSetupFactory
     ){
-        $this->empleadoSetup = $empleadoSetup;
+        $this->empleadoSetupFactory = $empleadoSetupFactory;
     }
 
     public function install(
@@ -24,7 +24,7 @@ class InstallData implements InstallDataInterface
         $setup->startSetup();
 
         $empleadoEntity = \Marcgento\ModuloEav\Model\Empleados::ENTITY;
-        $empleadoSetup = $this->empleadoSetup->create(['setup'=>$setup]);
+        $empleadoSetup = $this->empleadoSetupFactory->create(['setup'=>$setup]);
         $empleadoSetup->installEntities();
         $empleadoSetup->addAttribute(
             $empleadoEntity,
