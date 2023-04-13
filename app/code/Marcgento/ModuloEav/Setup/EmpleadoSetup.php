@@ -5,7 +5,7 @@ namespace Marcgento\ModuloEav\Setup;
 
 use Magento\Eav\Setup\EavSetup;
 
-class EmpleadoSetup implements EavSetup
+class EmpleadoSetup extends EavSetup
 {
     public function getDefaultEntity()
     {
