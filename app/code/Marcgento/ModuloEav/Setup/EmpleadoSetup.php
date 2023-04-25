@@ -9,7 +9,7 @@ class EmpleadoSetup extends EavSetup
 {
     public function getDefaultEntity()
     {
-        $empleadoEntity = \Marcgento\ModuloEav\ResourceModel\Empleados::ENTITY;
+        $empleadoEntity = \Marcgento\ModuloEav\Model\ResourceModel\Empleados::ENTITY;
 
         $entities = [
             $empleadoEntity => [
