@@ -39,7 +39,7 @@ class Collection extends EavCollection
             'main_table.entity_type_id=?',
             $this->_eavEntityFactory->create()->setType(FullEavSetup::ENTITY_TYPE_CODE)->getTypeId()
         )->join(
-            ['additional_table' => $this->getTable(FullEavSetup::EAV_ENTITY_TYPE_CODE . '_eav_attribute')],
+            ['additional_table' => $this->getTable(FullEavSetup::ENTITY_TYPE_CODE . '_eav_attribute')],
             'additional_table.attribute_id = main_table.attribute_id'
         );
         return $this;
