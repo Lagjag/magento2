@@ -7,6 +7,7 @@ use Magento\Eav\Setup\EavSetup;
 
 class FullEavSetup extends EavSetup {
     const ENTITY_TYPE_CODE = 'luismodule_fulleav_fulleav';
+    const EAV_ENTITY_TYPE_CODE = 'luismodule_fulleav';
 
     protected function getAttributes() 
     {
