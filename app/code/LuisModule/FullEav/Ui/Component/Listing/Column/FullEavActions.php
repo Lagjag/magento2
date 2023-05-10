@@ -6,6 +6,7 @@ use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
+
 class FullEavActions extends Column {
     /**
     * Url path
@@ -62,7 +63,7 @@ class FullEavActions extends Column {
                         'label' => __('Delete'),
                         'confirm' => [
                         'title' => __('Delete ' . $item['main_title']),
-                        'message' => __('E¿Estás seguro de que quieres borrar el siguiente registro ' . $item['main_title'] . ' ?'),
+                        'message' => __('¿Estás seguro de que quieres borrar el siguiente registro ' . $item['main_title'] . ' ?'),
                     ],
                     'hidden' => false,
                     ];
