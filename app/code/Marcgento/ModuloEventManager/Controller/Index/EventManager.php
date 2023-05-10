@@ -18,6 +18,11 @@ class EventManager extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
+        $parameters = [
+            'product' => $this->_objectManager->create('Magento\Catalog\Model\Product')->load(50),
+            'category' => $this->_objectManager->create('Magento\Catalog\Model\Product')->load(10),
+        ];
+        $this->_eventManager->dispatch('marcgento_register_visit',$parameters);
         return $resultPage;
     }
 }
