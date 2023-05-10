@@ -16,6 +16,6 @@ class RegisterVisitObserver implements ObserverInterface
 
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        $this->logger->debug('Acción observer registrada');
+        $this->logger->customlog('Acción observer registrada');
     }
 }
