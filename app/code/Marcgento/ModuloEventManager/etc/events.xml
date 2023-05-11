@@ -2,4 +2,7 @@
     <event name="marcgento_register_visit">
         <observer name="register_marcgento_visit" instance="Marcgento\ModuloEventManager\Observer\RegisterVisitObserver" />
     </event>
+    <event name="checkout_cart_product_add_after">
+        <observer name="checkout_cart_qty" instance="Marcgento\ModuloEventManager\Observer\CheckOutCartQtyObserver" />
+    </event>
 </config>
